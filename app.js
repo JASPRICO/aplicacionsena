@@ -70,7 +70,7 @@ app.get('/recuperar', async (req, res) => {
 });
 
 // Ruta de registro de cita
-app.get('/cita', async (req, res) => {
+app.get('http://127.0.0.1:3000/cita.html', async (req, res) => {
     try {
         const { car } = req.query;
         const { cc } = req.query;
@@ -89,7 +89,7 @@ app.get('/cita', async (req, res) => {
 });
 
 // consulta de citas
-app.get('/consulta', async (req, res) => {
+app.get('https://aplicacionsena.onrender.com/consulta', async (req, res) => {
     try {
         const { cont } = req.query;
         const { cc } = req.query;
@@ -97,9 +97,9 @@ app.get('/consulta', async (req, res) => {
 // que la consulta de la base de datos compare el dia con el actual
         const [rows] = await pool.query('SELECT * FROM citas WHERE contenedor = ? AND cedula = ? and dia = CURDATE()', [cont, cc,]);
         if (rows.length > 0) {
-            res.send('INGRESO AUTORIZADO');
+            res.send('INGERSO AUTORIZADO ');
         } else {
-            res.send('NO TIENE CITA PARA HOY ' );
+            res.send('NO TIENE CITA HOY' );
         }
     } catch (err) {
         res.status(500).send('Error en la consulta');
