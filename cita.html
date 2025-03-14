@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TOMAR CITA</title>
+    <style>
+        .centro {
+          width: 30%; /* O cualquier tamaño que desees */
+          margin:  auto; /* Centrado horizontal */
+          text-align: center;
+        }
+        .titulo {
+          width: 28%; /* O cualquier tamaño que desees */
+          margin:  auto; /* Centrado horizontal */
+        }
+       
+        
+        
+      </style>
+</head>
+
+<body>
+    <div class="titulo">
+        
+        <img width="400" alt="logo" src="container store system.JPG">
+
+    </div>
+    <div class="centro">
+    TOMAR CITA
+    <br><br>
+    <form action="http://localhost:5000/cita" method="get">
+        <input type="text" name="car" placeholder="Vehiculo">
+        <input type="text" name="cc" placeholder="Cedula">
+        <br><br>
+        <input type="text" name="condu" placeholder="Conductor">
+        <input type="text" name="cont" placeholder="Contenedor">
+        <br><br>
+        <input type="date" name="dia" placeholder="Dia">
+        <button  type="submit">Ingresar</button>
+    </form>
+    </div>
+</body>
+</html>
