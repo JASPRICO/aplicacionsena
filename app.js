@@ -89,7 +89,7 @@ app.get('http://127.0.0.1:3000/cita.html', async (req, res) => {
 });
 
 // consulta de citas
-app.get(/consulta', async (req, res) => {
+app.get(https://aplicacionsena.onrender.com/consulta', async (req, res) => {
     try {
         const { cont } = req.query;
         const { cc } = req.query;
