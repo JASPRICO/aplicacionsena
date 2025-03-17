@@ -27,7 +27,7 @@ app.get('/login', async (req, res) => {
         const [rows] = await pool.query('SELECT * FROM usuarios WHERE usuario = ? AND clave = ?', [user, pass]);
         if (rows.length > 0) {
             //enviar a index.html
-            res.sendFile(path.join(__dirname, '/cita'));
+            res.sendFile(path.join(__dirname, 'cita.html'));
         } else {
             res.send('Usuario no valido');
         }
@@ -89,7 +89,7 @@ app.get('http://127.0.0.1:3000/cita.html', async (req, res) => {
 });
 
 // consulta de citas
-app.get(/consulta', async (req, res) => {
+app.get('https://aplicacionsena.onrender.com/consulta', async (req, res) => {
     try {
         const { cont } = req.query;
         const { cc } = req.query;
@@ -112,6 +112,5 @@ app.get(/consulta', async (req, res) => {
 app.listen(5000, () => {
     console.log('Servidor corriendo en http://localhost:5000');
 });
-
 
 
