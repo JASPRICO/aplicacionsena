@@ -27,7 +27,7 @@ app.get('/login', async (req, res) => {
         const [rows] = await pool.query('SELECT * FROM usuarios WHERE usuario = ? AND clave = ?', [user, pass]);
         if (rows.length > 0) {
             //enviar a index.html
-            res.sendFile(path.join(__dirname, 'https://aplicacionsena.onrender.com/cita'));
+            res.sendFile(path.join(__dirname, '/cita'));
         } else {
             res.send('Usuario no valido');
         }
