@@ -70,7 +70,7 @@ app.get('/recuperar', async (req, res) => {
 });
 
 // Ruta de registro de cita
-app.get('http://127.0.0.1:3000/cita.html', async (req, res) => {
+app.get('https://aplicacionsena.onrender.com/cita', async (req, res) => {
     try {
         const { car } = req.query;
         const { cc } = req.query;
@@ -112,5 +112,6 @@ app.get('https://aplicacionsena.onrender.com/consulta', async (req, res) => {
 app.listen(5000, () => {
     console.log('Servidor corriendo en http://localhost:5000');
 });
+
 
 
