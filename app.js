@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 5000;
+const port = https://aplicacionsena.onrender.com;
 const path = require('path');
 
 
@@ -109,7 +109,7 @@ app.get(/consulta', async (req, res) => {
 
 
 // Escuchar en el puerto 5000
-app.listen(5000, () => {
+app.listen(https://aplicacionsena.onrender.com, () => {
     console.log('Servidor corriendo en http://localhost:5000');
 });
 
